@@ -6,16 +6,14 @@ Your function must utilize recursion. It cannot contain any loops.
 
 
 def count_th(word):
-    count = 0
     prev = word[:1]
 
     if word == '':
         return 0
 
     if word[1:2] == 'h' and prev == 't':
-        count += 1
         prev = word[:1]
-        return count + count_th(word[1:])
+        return 1 + count_th(word[1:])
 
     prev = word[:1]
-    return count + count_th(word[1:])
+    return count_th(word[1:])
