@@ -29,7 +29,18 @@ b) The snippet of code below has a runtime of `O(n log n)`. It is a `Logarithmic
 ### Justification
 The input in this pseudocode is n. When the snippet executes, the first for loop iterates `n` times and so we have O(n) for the for loop only. For every one of the n iterations, the while loop also runs. But unlike the outer for loop it only runs for fractions of the number of times making the runtime `Logarithmic`.
 
-
-c)
-
 ## Exercise II
+
+c) The below snippet of code has a runtime of `O(n)`. It is a `Linear runtime`.
+
+```
+    def bunnyEars(bunnies):
+      if bunnies == 0:
+        return 0
+
+      return 2 + bunnyEars(bunnies-1)
+```
+
+### Justification
+
+The input is bunnies. The number of times the function is called is equal to the value of the input variable `bunnies` since the variable is being decremented by 1 everytime it is called and the base case is that stops execution is when bunnies gets to 0. Hence a `Linear runtime`.
